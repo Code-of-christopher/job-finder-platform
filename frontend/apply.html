@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Apply - Job Finder</title>
+  <link rel="stylesheet" href="css/style.css">
+</head>
+<body>
+  <nav>
+    <h1><a href="home.html">JobFinder</a></h1>
+    <ul id="seeker-links">
+      <li><a href="jobList.html">Jobs</a></li>
+      <li><a href="" class="logout">Logout</a></li>
+    </ul>
+  </nav>
+  <main>
+    <h1>Apply for Job</h1>
+    <form id="apply-form">
+      <div>
+        <label for="name">Name:</label>
+        <input type="text" id="name" name="name" required>
+      </div>
+      <div>
+        <label for="email">Email:</label>
+        <input type="email" id="email" name="email" required>
+      </div>
+      <div>
+        <label for="resume">Resume:</label>
+        <input type="text" id="resume" name="resume" required>
+      </div>
+      <div>
+        <label for="coverLetter">Cover Letter:</label>
+        <textarea id="coverLetter" name="coverLetter" required></textarea>
+      </div>
+      <button type="submit">Submit Application</button>
+    </form>
+    <div id="error" style="color:red;"></div>
+  </main>
+  <script src="js/apply.js"></script>
+</body>
+</html>

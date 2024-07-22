@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Create Job - Job Finder</title>
+    <link rel="stylesheet" href="css/style.css" />
+  </head>
+  <body>
+    <nav>
+      <h1><a href="home.html">JobFinder</a></h1>
+      <ul id="employer-links">
+        <li><a href="myJobs.html">My Jobs</a></li>
+        <li><a href="" class="logout">Logout</a></li>
+      </ul>
+    </nav>
+    <main>
+      <h1>Create New Job</h1>
+      <form id="create-job-form">
+        <label for="title">Job Title</label>
+        <input type="text" id="title" name="title" required />
+
+        <label for="company">Company</label>
+        <input type="text" id="company" name="company" required />
+
+        <label for="location">Location</label>
+        <input type="text" id="location" name="location" required />
+
+        <label for="type">Job Type</label>
+        <select id="type" name="type" required>
+          <option value="full-time">Full-Time</option>
+          <option value="part-time">Part-Time</option>
+          <option value="contract">Contract</option>
+          <option value="internship">Internship</option>
+        </select>
+        <label for="description">Description</label>
+        <textarea id="description" name="description" required></textarea>
+        <button type="submit">Create Job</button>
+      </form>
+    </main>
+    <script src="js/addJob.js"></script>
+  </body>
+</html>

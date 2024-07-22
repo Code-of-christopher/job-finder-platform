@@ -1,0 +1,118 @@
+/* Add your styles here */
+*{
+  padding: 0;
+  margin: 0;
+  box-sizing: border-box;
+  outline: none;
+  user-select: none;
+  text-decoration: none;
+  list-style: none;
+}
+
+body {
+  font-family: Arial, sans-serif;
+  color: #29af2f;
+  background-image: url('/BMW.jpg');
+  background-position: inherit;
+  background-size: 100%;
+}
+  
+  nav {
+    background-color: #007bff;
+    color: white;
+    padding: 1rem;
+    margin-bottom: 16px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+  }
+  
+  nav ul {
+    margin: 10px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+  }
+  
+  nav ul li {
+    display: inline;
+    margin-right: 1rem;
+  }
+  
+  nav h1 a, nav ul li a {
+    color: white;
+  }
+  
+  nav ul li a:hover {
+    color: #07ff13;
+  }
+  
+  main {
+    padding: 2rem;
+    text-align: center;
+  }
+  
+  h2 {
+    margin: 1rem;
+    color: crimson;
+}
+
+form {
+  max-width: 500px;
+  margin: 0 auto;
+  padding: 2rem;
+  background-color: white;
+  border: 1px solid #ddd;
+  border-radius: 5px;
+}
+
+label {
+  display: block;
+  margin-bottom: 0.5rem;
+}
+
+input[type="text"],
+input[type="email"],
+input[type="password"],
+input[type="file"],
+select,
+textarea {
+  width: 100%;
+  padding: 0.5rem;
+  margin-bottom: 1rem;
+  border: 1px solid #ddd;
+  border-radius: 5px;
+}
+
+.job{
+  margin-bottom: 72px;
+}
+
+.job p{
+  padding: 2px;
+}
+
+button {
+  text-align: center;
+  width: 120px;
+  margin-top: 16px;
+  padding: 0.75rem;
+  background-color: #007bff;
+  color: white;
+  border: none;
+  border-radius: 5px;
+  cursor: pointer;
+}
+
+button:hover {
+  background-color: #0056b3;
+}
+
+footer {
+  text-align: center;
+  padding: 1rem;
+  background-color: #c74040;
+  position: fixed;
+  bottom: 0;
+  width: 100%;
+}
