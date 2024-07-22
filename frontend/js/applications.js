@@ -19,7 +19,7 @@ document.addEventListener("DOMContentLoaded", () => {
               const applicationElement = document.createElement("div");
               applicationElement.className = "application";
               applicationElement.innerHTML = `
-                  <h3>${application.name}</h3>
+                  <h2>${application.name}</h2>
                   <p>Email: ${application.email}</p>
                   <p>Resume: ${application.resume}</p>
                   <p>Cover Letter: ${application.coverLetter}</p>

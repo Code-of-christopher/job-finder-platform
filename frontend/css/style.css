@@ -12,9 +12,9 @@
 body {
   font-family: Arial, sans-serif;
   color: #29af2f;
-  background-image: url('/BMW.jpg');
+  /* background-image: url('/BMW.jpg');
   background-position: inherit;
-  background-size: 100%;
+  background-size: 100%; */
 }
   
   nav {
@@ -106,6 +106,10 @@ button {
 
 button:hover {
   background-color: #0056b3;
+}
+
+.application{
+  margin-bottom: 32px;
 }
 
 footer {

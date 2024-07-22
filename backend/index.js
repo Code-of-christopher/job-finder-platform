@@ -66,5 +66,9 @@ app.get('/applications', (req, res) => {
   res.sendFile(path.join(__dirname, '../frontend', 'applications.html'));
 });
 
+app.get('/myHires', (req, res) => {
+  res.sendFile(path.join(__dirname, '../frontend', 'myHires.html'));
+});
+
 const PORT = process.env.PORT || 5000;
 app.listen(PORT, () => console.log(`Server running on port ${PORT}`));

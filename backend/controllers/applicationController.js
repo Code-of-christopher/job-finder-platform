@@ -27,7 +27,7 @@ export const getClients = async (req, res) => {
   try{
     const clients = await Application.find({jobId: req.params.id});
     if (!clients.length) {
-      return res.status(404).json({ error: 'Applications not found' });
+      return res.status(404).json({ error: 'clients not found' });
     }
     res.json(clients);
   } catch (error){
