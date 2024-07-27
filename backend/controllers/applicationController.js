@@ -1,4 +1,5 @@
 import Application from '../models/Application.model.js';
+import Job from '../models/Job.model.js';
 
 export const submitApplication = async (req, res) => {
   try {
@@ -7,7 +8,7 @@ export const submitApplication = async (req, res) => {
     await application.save();
     res.status(201).json({ message: 'Application submitted successfully' });
   } catch (error) {
-    res.status(400).json({ error: error.message });
+    res.status(400).json({ errr: error.message });
   }
 };
 
@@ -23,14 +24,18 @@ export const getApplications = async (req, res) => {
   }
 }
 
-export const getClients = async (req, res) => {
-  try{
-    const clients = await Application.find({jobId: req.params.id});
+export const getClientsForEmployer = async (req, res) => {
+  try {
+    const employerId = req.params.employerId;
+    const jobs = await Job.find({ postedBy: employerId }).select('_id');
+    const jobIds = jobs.map(job => job._id);
+    const clients = await Application.find({ jobId: { $in: jobIds } });
+
     if (!clients.length) {
-      return res.status(404).json({ error: 'clients not found' });
+      return res.status(404).json({ error: 'No applications found for your jobs' });
     }
     res.json(clients);
-  } catch (error){
+  } catch (error) {
     res.status(500).json({ error: error.message });
   }
 }
